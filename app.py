@@ -6,7 +6,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def generate_buzz():
+<<<<<<< HEAD
     f = open("website.txt","r")
+=======
+    f=open("website.txt","r")
+>>>>>>> e3e014d6aa57c40b83b22facada4dc1121bba6f9
     page = f.read()
     return page
 
