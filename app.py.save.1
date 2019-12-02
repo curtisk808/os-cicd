@@ -6,8 +6,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def generate_buzz():
-    f=open("website.txt","r")
-    page = f
+    page = '<html><body><h1>'
+    page += generator.generate_buzz()
+    page += '</h1></body></html>'
     return page
 
 if __name__ == "__main__":
