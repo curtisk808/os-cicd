@@ -1,12 +1,5 @@
-import os
-from flask import Flask
-from buzz import generator
 
-app = Flask(__name__)
-
-@app.route("/")
-def generate_buzz():
-    website = '''<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title></title>
@@ -94,7 +87,7 @@ function loop() {
   context.fillStyle = 'red';
   context.fillRect(apple.x, apple.y, grid-1, grid-1);
   // draw snake one cell at a time
-  context.fillStyle = 'blue';
+  context.fillStyle = 'green';
   snake.cells.forEach(function(cell, index) {
     
     // drawing 1 px smaller than the grid creates a grid effect in the snake body so you can see how long it is
@@ -155,9 +148,4 @@ document.addEventListener('keydown', function(e) {
 requestAnimationFrame(loop);
 </script>
 </body>
-</html>'''
-    page = website
-    return page
-
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=int(os.getenv('PORT', 5000)))
+</html>
